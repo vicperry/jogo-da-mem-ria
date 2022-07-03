@@ -104,8 +104,9 @@ function App() {
    
    function checkVictory() {
       if (score == 8) {
-         alert('Você ganhou.');
          timer.stop();
+         console.log('Timer stop')
+         alert('Você ganhou.');
       }
    }
    
@@ -134,6 +135,7 @@ function App() {
             storage.sec = new_sec;
          }
          record.innerHTML = 'Tempo recorde: ' + storage.min + ':' + storage.sec;
+
          clearInterval(this.control);
          this.control = null;
       };
